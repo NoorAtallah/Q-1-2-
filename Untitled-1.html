@@ -1,0 +1,53 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Hello</h1>
+<ul id="my-list"></ul>
+
+<p id="result"></p>
+
+
+<script>
+    //Q1
+    let fruits = ["Banana", "BlueBerry", "Orange", "Apple", "Mango"]
+    let img_1 = ["1.png", "2.png" , "3.png" , "4.png" , "5.png"]
+    let list = document.getElementById("my-list")
+    for (i=0; i<fruits.length; i++)
+    {
+        let li = document.createElement("li")
+        let img_2 = document.createElement("img")
+        img_2.src= img_1[i]
+        img_2.alt= 
+        li.innerText = fruits[i]
+        
+        list.appendChild(li)
+        list.appendChild(img_2)
+        img_2.style.width="150px";
+        img_2.style.height="160px";
+        img_2.style.border="1px solid #FF71CD"
+        img_2.style.boxShadow="1px 1px 20px #FF71CD"
+    }
+
+    //Q2
+    function input_2(input,value){
+        for (let i = 0; i < input.length; i++) {
+    if (input[i] === value) {
+      return i;
+    }
+  }
+  return -1;
+    }
+    var myArray = [10, 20, 30, 40, 50];
+var numberToFind = 30;
+var result = input_2(myArray, numberToFind);
+
+
+console.log(result);
+document.getElementById('result').innerHTML = result
+</script>
+</body>
+</html>
